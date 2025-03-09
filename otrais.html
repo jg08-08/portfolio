@@ -1,71 +1,195 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
--->
-<html>
-    <head>
-        <title>W3.CSS Template</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {font-family: "Lato", sans-serif}
-.mySlides {display: none}
-</style>
-</head>
-<body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Navbar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-<!-- Navbar -->
-<div class="w3-top">
-  <div class="w3-bar w3-black w3-card">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">Mans portfolio</a>
-    <a href="otrais.html" class="w3-bar-item w3-button w3-padding-large">Temats</a>
-    <a href="gimp.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Gimp</a>
-    <a href="inkscape.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Inkscape</a>
-    <a href="3D modelēšana.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">3D modelēšana</a>
-    <a href="Video redigesana.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Video rediģēšana</a>
-    <a href="Word.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Word</a>
-    <a href="Excel.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Excel</a>
-    <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-padding-large w3-button" title="More">Vairāk <i class="fa fa-caret-down"></i></button>     
-      <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="#" class="w3-bar-item w3-button">Atsauces</a>
-        <a href="#" class="w3-bar-item w3-button">Mājaslapas veidotājs</a>
-      </div>
-    </div>
-    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
-  </div>
-</div>
+        body {
+            background-color: #f4f4f4;
+        }
 
-<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Temats</a>
-  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Gimp</a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Inkscape</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">3D modelēšana</a>
-  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Video rediģēšana</a>
-  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Word</a>
-  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Excel</a>
-</div>
-        <title>TODO supply a title</title>
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #1e1e2f; /* Deep navy blue */
+            padding: 15px 20px;
+        }
+
+        .menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .menu li {
+            position: relative;
+        }
+
+        .menu a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 20px;
+            display: block;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .menu a:hover {
+            background: #6a5acd; /* Soft purple */
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        /* Dropdown */
+        .dropdown {
+            display: none;
+            position: absolute;
+            background: #2e2e47; /* Darker navy */
+            top: 100%;
+            left: 0;
+            width: 200px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+
+        .dropdown li {
+            width: 100%;
+        }
+
+        .dropdown a {
+            padding: 10px 20px;
+            color: #c9c9ff; /* Soft light purple */
+        }
+
+        .dropdown a:hover {
+            background: #6a5acd;
+            color: #fff;
+        }
+
+        .menu li:hover .dropdown {
+            display: block;
+        }
+
+        /* Responsive Hamburger Menu */
+        .hamburger {
+            display: none;
+            font-size: 24px;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .menu {
+                display: none;
+                flex-direction: column;
+                background: #2e2e47; /* Dark navy */
+                width: 100%;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+                border-radius: 0 0 10px 10px;
+            }
+
+            .menu.show {
+                display: flex;
+            }
+
+            .menu a {
+                padding: 15px;
+                text-align: center;
+            }
+
+            .dropdown {
+                position: static;
+                display: none;
+                background: #3b3b5f; /* Softer dark blue */
+                width: 100%;
+                border-radius: 5px;
+            }
+
+            .menu li:hover .dropdown {
+                display: block;
+            }
+
+            .hamburger {
+                display: block;
+            }
+        }
+    </style>
+
+   
+	 <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
+		<style>
             h1{text-align: center;
             text-weight:bold;
-            margin:40px;}
-            .plakats{display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+            }
+  img {
+            width: 300px;  /* Set width */
+            height: auto;  /* Keeps aspect ratio */
+            float: right;  /* Aligns image to the right */
+            margin: 10px;  /* Adds space around the image */
+        }
+		p{
+		margin: 20px;
+		padding: 20px;
+		line-height:30px;
+		font-size: 20px;
+		}
+		
         </style>
     </head>
-    <body>
+    <body style="background-color:#CAE7DF";>
+	<nav class="navbar">
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <ul class="menu">
+            <li>
+                <a href="index.html">Apgūtais</a>
+                <ul class="dropdown">
+                    <li><a href="index.html">Gimp</a></li>
+                    <li><a href="index.html">Inkscape</a></li>
+                    <li><a href="index.html">3D modelēšana</a></li>
+                    <li><a href="index.html">Video modelēšana </a></li>
+                    <li><a href="index.html">Word</a></li>
+                    <li><a href="index.html">Excel</a></li>
+                </ul>
+            </li>
+            <li><a href="otrais.hmtl">Aizsardzība pret ļaunatūru</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector(".menu").classList.toggle("show");
+        }
+    </script>
         <h1 style="background-color:DodgerBlue;"><b>Aizsardzība pret ļaunatūru</b></h1>
-    <img src="Images/plakats.svg" alt="plakats par tematu" class="plakats">
+    <img src="your-image.jpg" alt="Description of Image">
+	
+	<h2 style="background-color:#0ab6ca;margin:40px; text-align:center"><b>Kas ir ļaunatūra?</b></h2>
+	
+	<p><b>Ļaunatūra</b> būtībā  ir  datora  programmatūra,  ko  izmanto  pretlikumīgiem  nolūkiem. Kibernoziedznieki <b>uzstāda</b> ļaunatūru datoros vai ierīcēs, lai iegūtu pār tām <b>kontroli</b>.<br>
+	Pēc uzstādīšanas ļaunatūra dod iespēju noziedzniekam <b>novērot</b> jūsu tiešsaistes aktivitātes, <b>nozagt</b> paroles vai failus, kā arī <b>izmantot</b> jūsu sistēmu, lai uzbruktu citiem.<br>
+	Ļaunatūra var arī pārņemt kontroli pār jūsu failiem un pieprasīt izpirkumu, lai jūs tos varētu atgūt.<br>
+	Tā spēj uzbrukt <b>jebkurai</b> ierīcei, sākot no windows ierīcēm līdz parastākajam apple aparātam.</p>
+	
+	<h2 style="background-color:#0ab6ca;margin:40px; text-align:center";> Kā aizsargāties no ļaunatūras?</h2>
+	
+	<p style="text-align:center">Labākais veids, kā pasargāt sevi no ļaunatūras, ir:</p>
+<ol style="text-align:center" >
+<li><b>Uzturēt</b> programmas aktuālas;</li>
+<li><b>Instalēt</b> uzticamu antivīrusa risinājumu;</li>
+<li><b>Būt uzmanīgiem</b>, lai veiksmīgi atpazītu mēģinājumus jūs apmānīt.</li>
+<li>Kad nekas vairs nelīdz, jūsu sistēmas palīdzēs atjaunot regulāri veiktās rezerves kopijas.</li>
+	<marquee>Izmantotie avoti:<a href="https://www.esidross.lv/2018/06/18/staties-preti-launaturai/" target="_blank"> šeit</a></marquee>
     </body>
+	
 </html>
