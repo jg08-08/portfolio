@@ -1,97 +1,111 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
--->
-
 <head>
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {font-family: "Lato", sans-serif}
-.mySlides {display: none}
-</style>
-</head>
-<body>
-
-<!-- Navbar -->
-<div class="w3-top">
-  <div class="w3-bar w3-black w3-card">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">Mans portfolio</a>
-    <a href="otrais.html" class="w3-bar-item w3-button w3-padding-large">Temats</a>
-    <a href="gimp.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Gimp</a>
-    <a href="inkscape.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Inkscape</a>
-    <a href="3D modelēšana.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">3D modelēšana</a>
-    <a href="Video redigesana.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Video rediģēšana</a>
-    <a href="Word.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Word</a>
-    <a href="Excel.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Excel</a>
-    <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-padding-large w3-button" title="More">Vairāk <i class="fa fa-caret-down"></i></button>     
-      <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="#" class="w3-bar-item w3-button">Atsauces</a>
-        <a href="#" class="w3-bar-item w3-button">Mājaslapas veidotājs</a>
-      </div>
-    </div>
-    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
-  </div>
-</div>
-
-<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Temats</a>
-  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Gimp</a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Inkscape</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">3D modelēšana</a>
-  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Video rediģēšana</a>
-  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Word</a>
-  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Excel</a>
-</div>
-
-    
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+<link rel="stylesheet" href="mansstils.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apgūtais</title>
         <style> 
-            h1{text-align:center;
-            text-weight:bold;
-            margin:40px;
-           }
+            h1{
+			text-align:center;
+            font-size:50px;
+			}
+		   h2{
+		   background-color:#0ab6ca;
+		   margin:40px; 
+		   text-align:center;
+		   }
+		   p{
+		   margin:40px;
+		line-height:30px;
+		font-size: 20px;
+		background-color:#2A9D8F; 
+    padding: 10px;
+    width: 700px;
+    border: 2px solid black;
+		}
+		
+		   img {
+		   width: 300px;  /* Set width */
+            height: auto;  /* Keeps aspect ratio */
+            float: right;  /* Aligns image to the right */
+            margin: 10px;  /* Adds space around the image */
+			
+			.gif {
+    max-width: 100%;
+    height: auto;
+}
             
     </style>
-<body> 
-    
-    <h1 style="background-color:DodgerBlue;"> <b>Mans portfolio</b></h1>
+	</head>
+<body style="background-color:#CAE7DF";> 
+ <nav class="navbar">
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <ul class="menu">
+            <li>
+                <a href="index.html">Apgūtais</a>
+                <ul class="dropdown">
+                    <li><a href="#gimp">Gimp</a></li>
+                    <li><a href="#inkscape">Inkscape</a></li>
+                    <li><a href="#3D mod">3D modelēšana</a></li>
+                    <li><a href="#vid">Video montāža </a></li>
+                    <li><a href="#word">Word</a></li>
+                    <li><a href="#excel">Excel</a></li>
+                </ul>
+            </li>
+            <li><a href="otrais.html">Aizsardzība pret ļaunatūru</a></li>
+        </ul>
+    </nav>
 
-        <div>TODO write content</div>
-        <ol>
-            <li>Kā mocīties excel</li><!-- comment -->
-            <li>Word doc apstrādi</li><!-- comment -->
-            <li> Video apstrādi</li>
-            <li> Plakātu veidošana Inkscape</li>
-            <li> 3D modelēšana</li>
-            <li> Gimp</li>
-        </ol> 
-       
-        <img src="Images/plakats.svg" alt="vgjghuv"
-             width="400"
-             height="500" />
-        
-        <img src="Images/Screenshot (3).png" alt=""
-             width="500"
-             height="400"/>
-        <video width="320" height="240" controls>
-    <source src="Images/3D kubs video - Made with Clipchamp.mp4" type="video/mp4">
-    Your browser does not support the <code>video</code> tag.
+    
+	
+    <br><br><br>
+    <h1 style="background-color:DodgerBlue; position:relative; top:0px, right:0px, left:0px;width:100%"> <b>Mans portfolio</b></h1>
+	<h2 id="gimp"> Gimp</h2>
+	<img src="your-gif.gif" alt="Responsive GIF" class="gif">
+	<p> <b>Rakstogrāfika.</b> Es ar gimp jau esmu strādājis iepriekš divās citās klasēs, tāpēc man pieredze jau bija bijusi<br>(tas nepalīzēja pārbaudes darbā, tas gan).
+	Iepriekš jau biju apguvis pamatfunkcijas,<br>background mainīšanu ar maģiskās nūjiņas palīdzību, bet šogad vēl klāt nāca gif veidošana,<br>
+	un manu brīnišķīgo gif, kas tika veidots pārbaudes laikā, var apskatīties attēlā.</p>
+	<img src="your-image.jpg" alt="Izpildītais pārbaudes darbs par gimp">
+	<br><br><br><br><br>
+	<h2 id="inkscape"> Inkscape</h2>
+	<img src="your-image.jpg" alt="Pārbaudes darbs">
+	<p> <b>Vektorgrafika.</b> Ar inkscape man arī bija iznācis sastapties iepriekš un lielākoties viss jau bija ņemts iepriekš.<br>
+	Šogad inkscape veidoju plakātu par tematu "Aizsardzība pret ļaunatūru", kuru varat apskatīt <a href="otrais.html" target="_blank"> šeit</a>.<br>
+Apskatījām funkcijas kā figūru zīmēšana, ceļu veidošana, plakātu veidošana, rezultātu eksportēšana<br>
+ nepieciešamā formātā.</p>
+ <br><br><br><br><br>
+ <h2 id="3D mod"> 3D modelēšana</h2>
+ <img src="your-image.jpg" alt="3D gabaliņš">
+ <p> Ar 3D modlēšanu saskāros pirmo reizi savā dzīvē, tāpēc jutos pilnībā apmaldījies sākumā.<br>
+ Tāpēc bija intersanti, ka grupā man bija jātaisa 3D gabaliņš ar logo, bet beigās izdevās. <br>
+ Rezultātu varat aplūkot augšējā attēlā. Pirmais mūsu grupas izdrukātais kubs neiznāca pareizs,<br>
+ tāpēc drukājām vēlreiz, un beigās viss iznāca.</p>
+ <img src="your-image.jpg" alt="atzīme">
+ <br><br><br><br><br>
+ <h2 id="vid"> Video montāža</h2>
+ <div>
+ <p style="margin:20px;"> Ar video montāžu pieredzes arī nebija pilnībā nekādas, tomēr tas man, man liekas,<br>
+ izdevās labāk un bija interesantāk nekā iepriekš darītais. Videoklipu,<br>
+ ko izveidoju lietotnē "Clipchamp", var noskatīties tepat.</p>
+</div> 
+  <img src="your-image.jpg" alt="atzīme">
+<video width="640" height="360" style="float:left">
+    <source src="https://github.com/jg08-08/portfolio/releases/download/v1.0/3D.kubs.video.-.Made.with.Clipchamp.1.mp4" type="video/mp4">
 </video>
-        <img src="Images/animacija pret launaturu.gif" alt=""/>
-        <div id="otrais">
-            <p> Man gribas</p>
-        </div>
-    </body>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<h2 id="word">Word</h2>
+<img src="your-image.jpg" alt="atzīme">
+<p><b>Teksta apstrāde</b>Word jau, protams, ir nezkaitāmas reizes apgūts, bet šogad apguvu vēl vairāk darbību, ko var izpildīt Word, 
+piemēram, bibliogrāfiju, citātus, vairāku vienādu dok. apstrāda u.c. Ar šo nebija viegli, bet beigās kaut kā sagāja,
+iegūtais vērtējums bija normāls. Bildē var apskatīt.....</p>
+<br><br><br><br><br>
+<h2 id="excel"> Excel</h2>
+<img src="your-image.jpg" alt="grafiks no pd">
+<p><b>Izklājlapas</b> Ar excel ir arī vairākkārt strādāts, bet šogad arī ir apgūts vēl vairāk nekā iepriekš. Jau fizikā gada sākumā apguvām
+grafiku veidošanu, tāpēc tas nesagādāja lielas problēmas, bet gan pivot table, gan lielo datu apstrāde un garu formulu un to apvienojuumu 
+rakstīšana bija apgrūtinoša. Formulas jau bija bijušas, bet tik ļoti sarežģītos apvienojumos ne. Galva pēc katras stundas sāpēja. 
+Bildē var apskatīt izveidotu grafiku pārbaudes darbā.</p>
+</body>    
+<marquee>Mājaslapas autors:Jānis Grabis 10.f</marquee>
 </html>
+ 
