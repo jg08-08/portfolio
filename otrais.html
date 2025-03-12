@@ -1,139 +1,20 @@
 <!DOCTYPE html>
 <head>
+<link rel="stylesheet" href="mansstils.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Navbar</title>
+    <title>Ļaunatūra</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
 
         body {
             background-color: #f4f4f4;
         }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #1e1e2f; /* Deep navy blue */
-            padding: 15px 20px;
-        }
-
-        .menu {
-            display: flex;
-            list-style: none;
-        }
-
-        .menu li {
-            position: relative;
-        }
-
-        .menu a {
-            color: #ffffff;
-            text-decoration: none;
-            padding: 12px 20px;
-            display: block;
-            transition: background 0.3s, color 0.3s;
-        }
-
-        .menu a:hover {
-            background: #6a5acd; /* Soft purple */
-            color: #fff;
-            border-radius: 5px;
-        }
-
-        /* Dropdown */
-        .dropdown {
-            display: none;
-            position: absolute;
-            background: #2e2e47; /* Darker navy */
-            top: 100%;
-            left: 0;
-            width: 200px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-            border-radius: 5px;
-        }
-
-        .dropdown li {
-            width: 100%;
-        }
-
-        .dropdown a {
-            padding: 10px 20px;
-            color: #c9c9ff; /* Soft light purple */
-        }
-
-        .dropdown a:hover {
-            background: #6a5acd;
-            color: #fff;
-        }
-
-        .menu li:hover .dropdown {
-            display: block;
-        }
-
-        /* Responsive Hamburger Menu */
-        .hamburger {
-            display: none;
-            font-size: 24px;
-            color: #ffffff;
-            cursor: pointer;
-        }
-
-        @media (max-width: 768px) {
-            .menu {
-                display: none;
-                flex-direction: column;
-                background: #2e2e47; /* Dark navy */
-                width: 100%;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-                border-radius: 0 0 10px 10px;
-            }
-
-            .menu.show {
-                display: flex;
-            }
-
-            .menu a {
-                padding: 15px;
-                text-align: center;
-            }
-
-            .dropdown {
-                position: static;
-                display: none;
-                background: #3b3b5f; /* Softer dark blue */
-                width: 100%;
-                border-radius: 5px;
-            }
-
-            .menu li:hover .dropdown {
-                display: block;
-            }
-
-            .hamburger {
-                display: block;
-            }
-        }
-    </style>
-
-   
-	 <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<style>
-            h1{text-align: center;
-            text-weight:bold;
-            }
+          	h1{
+			text-align:center;
+            font-size:50px;
+			}
   img {
-            width: 400px;  /* Set width */
+            width: 500px;  /* Set width */
             height: auto;  /* Keeps aspect ratio */
             float: center;  /* Aligns image to the right */
             margin: 10px;  /* Adds space around the image */
@@ -154,15 +35,15 @@
             <li>
                 <a href="index.html">Apgūtais</a>
                 <ul class="dropdown">
-                    <li><a href="index.html">Gimp</a></li>
-                    <li><a href="index.html">Inkscape</a></li>
-                    <li><a href="index.html">3D modelēšana</a></li>
-                    <li><a href="index.html">Video modelēšana </a></li>
-                    <li><a href="index.html">Word</a></li>
-                    <li><a href="index.html">Excel</a></li>
+                    <li><a href="index.html#gimp">Gimp</a></li>
+                    <li><a href="index.html#inkscape">Inkscape</a></li>
+                    <li><a href="index.html#3D mod">3D modelēšana</a></li>
+                    <li><a href="index.html#vid">Video montēšana </a></li>
+                    <li><a href="index.html#word">Word</a></li>
+                    <li><a href="index.html#excel">Excel</a></li>
                 </ul>
             </li>
-            <li><a href="otrais.hmtl">Aizsardzība pret ļaunatūru</a></li>
+            <li><a href="otrais.hmtl" target="_blank">Aizsardzība pret ļaunatūru</a></li>
         </ul>
     </nav>
 
@@ -171,8 +52,9 @@
             document.querySelector(".menu").classList.toggle("show");
         }
     </script>
-        <h1 style="background-color:DodgerBlue;"><b>Aizsardzība pret ļaunatūru</b></h1>
-    	
+	<br><br><br>
+        <h1 style="background-color:DodgerBlue; position:relative; top:30px, right:0px, left:0px;width:100%"><b>Aizsardzība pret ļaunatūru</b></h1>
+ 	
 	<h2 style="background-color:#0ab6ca;margin:40px; text-align:center"><b>Kas ir ļaunatūra?</b></h2>
 	
 	<p><b>Ļaunatūra</b> būtībā  ir  datora  programmatūra,  ko  izmanto  pretlikumīgiem  nolūkiem. Kibernoziedznieki <b>uzstāda</b> ļaunatūru datoros vai ierīcēs, lai iegūtu pār tām <b>kontroli</b>.<br>
@@ -188,8 +70,13 @@
 <li><b>Instalēt</b> uzticamu antivīrusa risinājumu;</li>
 <li><b>Būt uzmanīgiem</b>, lai veiksmīgi atpazītu mēģinājumus jūs apmānīt.</li>
 <li>Kad nekas vairs nelīdz, jūsu sistēmas palīdzēs atjaunot regulāri veiktās rezerves kopijas.</li>
-	<br>
-	<img src="aizsardziba.png" alt="plakats par launaturu">
+<br><br><br>
+<figure>
+   <img src="your-image.jpg" alt="Description of Image">
+   <figcaption>Manis veidotais plakāts <br>
+   par aizsardzību pret ļaunatūru
+   </figcaption>
+   </figure>
 	<marquee>Izmantotie avoti:<a href="https://www.esidross.lv/2018/06/18/staties-preti-launaturai/" target="_blank"> šeit</a></marquee>
     </body>
 	
