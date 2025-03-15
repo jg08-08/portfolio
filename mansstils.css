@@ -133,7 +133,10 @@
 			width:auto;
 		}
 		
-		
+		figure{
+			text-align: right;
+    			margin: 0;
+		}
 		
 		
 		<script>
